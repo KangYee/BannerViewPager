@@ -85,7 +85,7 @@ public class BannerManager {
     removeDefaultPageTransformer();
     if (overlap && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       mDefaultPageTransformer = new OverlapPageTransformer(mBannerOptions
-          .getOrientation(), scale, 0f, 1, itemGap);
+          .getOrientation(), 0.4f, 0f, 1, itemGap);
     } else {
       mDefaultPageTransformer = new ScaleInTransformer(scale);
     }

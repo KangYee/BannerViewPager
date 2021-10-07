@@ -9,7 +9,6 @@ import com.zhpan.bannerview.BaseViewHolder;
  * @author DBoy
  * @date 2020/12/11
  * Class 描述 : 使用ViewBinding示例
- * 1
  */
 public class ViewBindingSampleAdapter extends BaseBannerAdapter<Integer> {
 
