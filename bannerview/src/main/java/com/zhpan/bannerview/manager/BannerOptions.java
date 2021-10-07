@@ -50,7 +50,7 @@ public class BannerOptions {
 
   private int pageStyle = PageStyle.NORMAL;
 
-  private float pageScale = DEFAULT_MIN_SCALE;
+  private float pageScale = 0.45F;
 
   private IndicatorMargin mIndicatorMargin;
 
