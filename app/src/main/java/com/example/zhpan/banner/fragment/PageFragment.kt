@@ -117,9 +117,10 @@ class PageFragment : BaseFragment() {
         mViewPager
             .setPageMargin(resources.getDimensionPixelOffset(dimen.dp_15))
             .setScrollDuration(800)
+            .setOffScreenPageLimit(8)
             .setRevealWidth(leftRevealWidth, rightRevealWidth)
             .setPageStyle(pageStyle)
-            .create(getPicList(4))
+            .create(getPicList(10))
     }
 
     /**

@@ -50,7 +50,7 @@ abstract class BaseFragment : RxFragment() {
   protected fun getPicList(count: Int): MutableList<Int> {
     mPictureList.clear()
     for (i in 0..count) {
-      val drawable = resources.getIdentifier("advertise$i", "drawable", mContext.packageName)
+      val drawable = resources.getIdentifier("advertise1", "drawable", mContext.packageName)
       mPictureList.add(drawable)
     }
     return mPictureList;
