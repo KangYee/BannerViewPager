@@ -25,6 +25,7 @@ public class BannerOptions {
     pageMargin = BannerUtils.dp2px(20);
     rightRevealWidth = DEFAULT_REVEAL_WIDTH;
     leftRevealWidth = DEFAULT_REVEAL_WIDTH;
+    itemGap = 200F;
   }
 
   public static final int DEFAULT_REVEAL_WIDTH = -1000;
@@ -32,6 +33,8 @@ public class BannerOptions {
   private int offScreenPageLimit = ViewPager2.OFFSCREEN_PAGE_LIMIT_DEFAULT;
 
   private int interval;
+
+  private float itemGap;
 
   private boolean isCanLoop;
 
@@ -77,6 +80,14 @@ public class BannerOptions {
 
   public void setInterval(int interval) {
     this.interval = interval;
+  }
+
+  public float getItemGap() {
+    return itemGap;
+  }
+
+  public void setItemGap(float itemGap) {
+    this.itemGap = itemGap;
   }
 
   public boolean isCanLoop() {

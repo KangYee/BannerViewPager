@@ -81,11 +81,11 @@ public class BannerManager {
     mCompositePageTransformer.addTransformer(mMarginPageTransformer);
   }
 
-  public void setMultiPageStyle(boolean overlap, float scale) {
+  public void setMultiPageStyle(boolean overlap, float scale, float itemGap) {
     removeDefaultPageTransformer();
     if (overlap && Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
       mDefaultPageTransformer = new OverlapPageTransformer(mBannerOptions
-          .getOrientation(), 0.45F, 0f, 1, -150);
+          .getOrientation(), scale, 0f, 1, itemGap);
     } else {
       mDefaultPageTransformer = new ScaleInTransformer(scale);
     }

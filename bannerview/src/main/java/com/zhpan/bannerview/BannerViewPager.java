@@ -416,10 +416,11 @@ public class BannerViewPager<T> extends RelativeLayout implements LifecycleObser
 
   private void initPageStyle(@APageStyle int pageStyle) {
     float pageScale = mBannerManager.getBannerOptions().getPageScale();
+    float itemGap = mBannerManager.getBannerOptions().getItemGap();
     if (pageStyle == PageStyle.MULTI_PAGE_OVERLAP) {
-      mBannerManager.setMultiPageStyle(true, pageScale);
+      mBannerManager.setMultiPageStyle(true, pageScale, itemGap);
     } else if (pageStyle == PageStyle.MULTI_PAGE_SCALE) {
-      mBannerManager.setMultiPageStyle(false, pageScale);
+      mBannerManager.setMultiPageStyle(false, pageScale, itemGap);
     }
   }
 
@@ -584,6 +585,16 @@ public class BannerViewPager<T> extends RelativeLayout implements LifecycleObser
    */
   public BannerViewPager<T> setInterval(int interval) {
     mBannerManager.getBannerOptions().setInterval(interval);
+    return this;
+  }
+
+  public BannerViewPager<T> setPageScale(float pageScale) {
+    mBannerManager.getBannerOptions().setPageScale(pageScale);
+    return this;
+  }
+
+  public BannerViewPager<T> setItemGap(float itemGap) {
+    mBannerManager.getBannerOptions().setItemGap(itemGap);
     return this;
   }
 
